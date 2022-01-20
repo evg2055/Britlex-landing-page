@@ -1,0 +1,42 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.main-container {
+    display: flex;
+    padding: 55px 131px ;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    color: black;
+}
+.logo {
+    font-size: 36px;
+    font-weight: 400px;
+}
+.logo__span {
+    color: grey;
+}
+.nav {
+    display: flex;
+}
+.nav__link {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 15px;
+    color: black;
+
+}
+.nav__button {
+    font-size: 24px;
+    font-weight: 400;
+    padding: 17px 57px;
+    text-decoration: none;
+    border: black solid 1px;
+    border-radius: 5px;
+    color: black;
+
+}
