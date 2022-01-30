@@ -1,0 +1,100 @@
+/*global*/
+:root {
+    --base-color: #000000;
+    --second-color: #afafaf;
+    --antonim-base-color: #ffffff;
+    --base-size: 10px;
+    --base-percent: 10%;
+}
+* {
+    box-sizing: border-box;
+    font-family: poppins, Arial, Helvetica, sans-serif; 
+}
+.container {
+    width: calc(var(--base-percent)*8.5);
+    margin: 0 auto;
+}
+/*header*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: calc(var(--base-size)*2);
+}
+.logo {
+    font-size: calc(var(--base-size)*3.6);
+    line-height: calc(var(--base-size)*5.6);
+}
+.logo_half {
+    color: var(--second-color);
+}
+.menu {
+    display: flex;
+}
+.menu__li {
+    margin-left: calc(var(--base-size)*2);
+}
+.menu__li:first-child {
+    margin-left: 0;
+}
+.menu__link {
+    text-decoration: none;
+    color: var(--base-color);
+}
+.header__button {
+    text-decoration: none;
+    color: var(--base-color);
+    font-size: calc(var(--base-size)*2.4);
+    line-height: calc(var(--base-size)*3.6);
+    border: 2px solid var(--base-color);
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: var(--base-size) calc(var(--base-size)*3);
+}
+/*main*/
+/*article-1*/
+.introductory {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.introductory__text {
+    width: calc(var(--base-percent)*5);
+}
+.introductory__header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: calc(var(--base-percent)*8.5);
+    font-size: calc(var(--base-size)*5);
+    font-weight: 600;
+    line-height: calc(var(--base-size)*8);
+    margin-top: calc(var(--base-size)*9);
+}
+.light-bulb {
+    position: absolute;
+    top: calc(var(--base-size)*10);
+    left: calc(var(--base-size)*38);
+    width: calc(var(--base-size)*9);
+    height: calc(var(--base-size)*9);
+}
+.introducory__jpg {
+    /*align-self: center;*/
+    object-fit: contain;
+    max-width: calc(var(--base-percent)*4.5);
+    max-height: calc(var(--base-percent)*4.5);
+    
+}
+.introductory__p {
+    max-width: calc(var(--base-size)*45);
+    margin: calc(var(--base-size)*4) 0;
+}
+.introductory__button /*тут пиздецовый костыль*/{
+    text-decoration: none;
+    color: var(--antonim-base-color);
+    background-color: var(--base-color);
+    font-size: calc(var(--base-size)*3);
+    box-sizing: border-box;
+    border-radius: calc(var(--base-size)*1.5);
+    padding: var(--base-size) calc(var(--base-size)*5);
+}
