@@ -7,7 +7,7 @@
     --base-percent: 10%;
 }
 body {
-    min-width: 1025px;
+    /*min-width: 1025px;*/
 }
 * {
     box-sizing: border-box;
@@ -17,13 +17,16 @@ body {
     margin: calc(var(--base-size)*3) 0;
 }
 .container {
-    width: calc(var(--base-percent)*8.5);
+    max-width: calc(var(--base-percent)*8.5);
     margin: 0 auto;
 }
 .title-articles {
     text-align: center;
     font-size: calc(var(--base-size)*3.6);
     margin: calc(var(--base-size)*9);
+}
+.sections-title {
+    font-size: calc(var(--base-size)*2.5);
 }
 /*header*/
 .header {
@@ -117,9 +120,6 @@ body {
     border-radius: var(--base-size);
     padding: calc(var(--base-size)*4);
 }
-.skills-title {
-    font-size: calc(var(--base-size)*2.5);
-}
 .skill-card__button {
     display: inline-block;
     text-decoration: none;
@@ -192,4 +192,102 @@ body {
 .about-us__img {
     grid-row: 1 / 4;
     grid-column: 2 ;
+}
+/*pricing*/
+/*
+.pricing {
+    display: flex;
+    flex-wrap: wrap;
+}
+.pricing__title-articles_centr {
+    width: 100%;
+}
+.pricing__card {
+    width: calc(100%/3);
+    align-content: flex-end;
+}
+.p-price {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--second-color);
+    border-radius: calc(var(--base-size)*0.5);
+    padding: 0 calc(var(--base-size)*2);
+}
+.price {
+    font-size: 30px;
+    margin-right: var(--base-size);
+}*/
+.pricing {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-between;
+}
+.pricing__title {
+    grid-column: 1 / 4;
+}
+/*1-card*/
+.pricing-img__self-study {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: center;
+}
+.title__self-study {
+    grid-column: 1;
+    grid-row: 3;
+}
+.p__self-study {
+    grid-column: 1;
+    grid-row: 4;
+}
+.price-wrapper__self-study {
+    grid-column: 1;
+    grid-row: 5;
+}
+/*2-card*/
+.pricing-img__online-classes {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+}
+.title__online-classes {
+    grid-column: 2;
+    grid-row: 3;
+}
+.p__online-classes {
+    grid-column: 2;
+    grid-row: 4;
+}
+.price-wrapper__online-classes {
+    grid-column: 2;
+    grid-row: 5;
+}
+/*3-card*/
+.pricing-img__personal-tuition {
+    grid-column: 3;
+    grid-row: 2;
+    align-self: center;
+}
+.title__personal-tuition {
+    grid-column: 3;
+    grid-row: 3;
+}
+.p__personal-tuition {
+    grid-column: 3;
+    grid-row: 4;
+}
+.price-wrapper__personal-tuition {
+    grid-column: 3;
+    grid-row: 5;
+}
+/*price*/
+.p-price {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--second-color);
+    border-radius: calc(var(--base-size)*0.5);
+    padding: 0 calc(var(--base-size)*2);
+}
+.price {
+    font-size: 30px;
+    margin-right: var(--base-size);
 }
