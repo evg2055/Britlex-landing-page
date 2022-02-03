@@ -6,9 +6,6 @@
     --base-size: 10px;
     --base-percent: 10%;
 }
-body {
-    /*min-width: 1025px;*/
-}
 * {
     box-sizing: border-box;
     font-family: poppins, Arial, Helvetica, sans-serif; 
@@ -219,7 +216,7 @@ body {
 }*/
 .pricing {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: calc(var(--base-percent)*3) calc(var(--base-percent)*3) calc(var(--base-percent)*3);
     justify-content: space-between;
 }
 .pricing__title {
@@ -290,4 +287,35 @@ body {
 .price {
     font-size: 30px;
     margin-right: var(--base-size);
+}
+/*contact-us*/
+.contact-us {
+    display: flex;
+    justify-content: space-between;
+    margin-top: calc(var(--base-size)*20);
+}
+.contact-us__img {
+    max-width: calc(var(--base-percent)*3);
+    object-fit: contain;
+}
+.contact-us__section {
+    max-width: calc(var(--base-percent)*5);
+}
+.contact-us__img-adaptiv {
+    display: none;
+}
+.form {
+    display: flex;
+    width: calc(var(--base-percent)*10);
+}
+.form__input {
+    width: calc(var(--base-size)*45);
+    border-radius: calc(var(--base-size)*0.5);
+}
+.form__submit {
+    padding: var(--base-size) calc(var(--base-size)*5);
+    background-color: var(--base-color);
+    color: var(--antonim-base-color);
+    margin-left: var(--base-size);
+    border-radius: calc(var(--base-size)*0.5);
 }
